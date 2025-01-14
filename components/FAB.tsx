@@ -12,9 +12,10 @@ export default function FAB(props: Props) {
   const { label, onPress, onLongPress, position = 'right' } = props;
   return (
     <Pressable
-      style={[
+      style={({ pressed }) => [
         styles.floatingButton,
         position === 'right' ? styles.positionRight : styles.positionLeft,
+        { opacity: pressed ? 0.7 : 1 },
       ]}
       onPress={onPress}
       onLongPress={onLongPress}

@@ -10,6 +10,8 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.textHuge}>{count}</Text>
 
+      <FAB position="left" onPress={() => setCount(0)} label="Reset" />
+
       <FAB
         onPress={() => setCount(count + 1)}
         onLongPress={() => setCount(count + 10)}
